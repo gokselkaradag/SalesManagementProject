@@ -1,0 +1,27 @@
+﻿@model Sale
+
+@{
+    ViewData["Title"] = "Teklif Ekle";
+}
+
+<h2 class="my-4">Teklif Ekle</h2>
+
+<form asp-action="AddOffer" method="post">
+    <div class="form-group">
+        <label>Teklif Başlığı</label>
+        <input type="text" class="form-control" asp-for="OfferTittle" />
+    </div>
+    <div class="form-group">
+        <label>Müşteri Adı</label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label>Teklif No</label>
+        <input type="text" class="form-control" asp-for="ListingNumber" />
+    </div>
+    <div class="form-group">
+        <label>Fiyat</label>
+        <input type="text" class="form-control" asp-for="Price" />
+    </div>
+    <button type="submit" class="btn btn-primary">Teklif Ekle</button>
+</form>
